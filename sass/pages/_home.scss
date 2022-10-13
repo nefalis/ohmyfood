@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+}
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+
+    
+
+    .fa-location-dot {
+        padding-right: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .localisation__texte {
+        padding-left: 10px;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        background-color: $lightgray;
+    }
+}

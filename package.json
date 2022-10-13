@@ -1,0 +1,23 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nefalis/ohmyfood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nefalis/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/nefalis/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

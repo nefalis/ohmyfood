@@ -1,0 +1,83 @@
+/** utils **/
+/** couleurs **/
+/** layout **/
+body {
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  box-shadow: 0px 5px 10px rgb(126, 124, 124);
+}
+.header .header__logo {
+  height: 35px;
+}
+
+/** base **/
+@font-face {
+  font-family: "Shrikhand";
+  src: url("fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("fonts/Roboto/Roboto-Black.ttf") format("truetype");
+}
+body {
+  font-family: "Roboto-Regular";
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+h2 {
+  font-family: "Roboto-Black";
+  font-size: 26px;
+}
+
+h3 {
+  font-family: "Shrikhand";
+  font-weight: lighter;
+}
+
+/** page **/
+body {
+  margin: 0px;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.localisation .fa-location-dot {
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.localisation .localisation__texte {
+  padding-left: 10px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3e3e3;
+}
+
+/*# sourceMappingURL=style.css.map */
