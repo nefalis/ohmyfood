@@ -30,56 +30,65 @@
 <body>
 
     <header class="header">
-       <img class="header__logo" src="images/ohmyfood.png" alt="logo ohmyfood">
+        <img class="header__logo" src="images/ohmyfood.png" alt="logo ohmyfood">
     </header>
 
     <main>
         <!-- localisation-->
 
         <div class="localisation">
-            <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-location-dot fa-lg"></i>
             <input class="localisation__texte" type="text" placeholder="Paris, Belleville" />
         </div>
 
         <!-- présentation -->
-        <section class="présentation">
-            <div class="présentation__texte">
+        <section class="presentation">
+            <div class="presentation__texte">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
             </div>
-            <div class="presentation__bouton">
-                <button class="presentation__btn" type="submit">
-                    Explorer nos restaurants
-                </button>
-            </div>
+            <a href class="presentation__btn">Explorer nos restaurants</a>
         </section>
 
         <!-- fonctionnement-->
         <section class="fonctionnement">
             <div class="Fonctionnement__list">
                 <h2 class="fonctionnement__titre">Fonctionnement</h2>
-                <div class="fonctionnement__etape1">
-                    <p>1</p>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <a href="#">Choississez un restaurant</a>
-                </div>
-                <div class="fonctionnement__etape2">
-                   <p>2</p> 
-                   <i class="fa-solid fa-list"></i>
-                   <a href="#">Composez votre menu</a>
-                </div>
-                <div class="fonctionnement__etape3">
-                    <p>3</p> 
-                    <i class="fa-sharp fa-solid fa-store"></i>
-                    <a href="#">Composez votre menu</a>
-                 </div>
+                <ol>
+                    <li>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <a href="restaurants">Choississez un restaurant</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-list"></i>
+                        <a href="restaurants">Composez votre menu</a>
+                    </li>
+                    <li>
+                        <i class="fa-sharp fa-solid fa-store"></i>
+                        <a href="restaurants">Dégustez au restaurant</a>
+                    </li>
+                </ol>
             </div>
+ </section>
+<!-- Listes restaurants-->
+<section class="restaurants">
+<div class="restaurants__titre">
+    <h2>Restaurants</h2>
+</div>
+<div class="restaurants__list">
+    <article>
+        <a href="la_palette_du_gout.html"></a>
+        <img class="restaurants__photo" src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo La palette du goût">
+   
+    </article>
+</div>
 
 
-            
-            
 
-        </section>
+</section>
+
+
+       
     </main>
 
     <footer>
