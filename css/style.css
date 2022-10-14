@@ -76,7 +76,7 @@ body {
   align-items: center;
   margin-left: 100px;
 }
-.localisation .localisation__texte {
+.localisation .localisation__text {
   padding-left: 10px;
   border: none;
   font-size: 20px;
@@ -93,11 +93,11 @@ body {
   background-color: rgb(245, 241, 250);
   padding: 20px 16px 50px 20px;
 }
-.presentation .presentation__texte {
+.presentation .presentation__text {
   text-align: center;
   padding-bottom: 16px;
 }
-.presentation .presentation__texte h1 {
+.presentation .presentation__text h1 {
   font-weight: bold;
 }
 .presentation .presentation__btn {
@@ -109,18 +109,14 @@ body {
 }
 
 .fonctionnement {
-  padding: 16px;
+  padding: 0px 16px;
   display: flex;
-}
-.fonctionnement .fonctionnement__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 .fonctionnement ol {
-  flex-direction: column;
   counter-reset: steps;
-  padding-left: 14px;
+  padding-left: 16px;
+  gap: 16px;
 }
 .fonctionnement li {
   display: flex;
@@ -160,6 +156,35 @@ body {
 }
 .fonctionnement .fa-mobile-screen-button {
   padding-left: 16px;
+}
+
+.restaurant {
+  padding: 16px;
+}
+.restaurant .restaurant__title {
+  font-weight: 800;
+}
+.restaurant .restaurant__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurant .restaurant__list article {
+  height: 240px;
+  display: flex;
+  overflow: hidden;
+  flex: 1 0 100%;
+  flex-direction: column;
+  border-radius: 16px 16px;
+  box-shadow: 1px 2px 5px rgb(216, 215, 215);
+}
+.restaurant .restaurant__list img {
+  height: 230px;
+  width: 100%;
+}
+.restaurant .restaurant__list .fa-heart {
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

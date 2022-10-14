@@ -14,7 +14,7 @@ body {
         margin-left: 100px;
     }
 
-    .localisation__texte {
+    .localisation__text {
         padding-left: 10px;
         border: none;
         font-size: 20px;
@@ -29,7 +29,8 @@ body {
     flex-direction: column;
     background-color: rgb(245, 241, 250);
     padding: 20px 16px 50px 20px;
-    .presentation__texte {
+
+    .presentation__text {
         text-align: center;
         padding-bottom: 16px;
 
@@ -37,6 +38,7 @@ body {
             font-weight: bold;
         }
     }
+
     .presentation__btn {
         border-radius: 35px 35px;
         padding: 16px 30px 16px 30px;
@@ -47,49 +49,89 @@ body {
 }
 
 .fonctionnement {
-    padding: 16px;
+    padding: 0px 16px;
     display: flex;
-    .fonctionnement__list {
+    flex-direction: column;
+    ol {
+
+        counter-reset: steps;
+        padding-left: 16px;
+        gap: 16px;
+    }
+
+    li {
         @include flex-center;
+        position: relative;
+        width: 350px;
+        height: 60px;
+        border-radius: 20px 20px;
+        box-shadow: 1px 2px 5px rgb(216, 215, 215);
     }
-        ol {
-          flex-direction: column;
-          counter-reset: steps;
-          padding-left: 14px;
-        }
-       li {
-            @include flex-center;
-            position: relative;
-            width: 350px;
-            height: 60px;
-            border-radius: 20px 20px ;
-            box-shadow: 1px 2px 5px rgb(216, 215, 215);
-        }
-        li:before {
-            @include flex-center;
-            content: "" counter(steps);
-            counter-increment: steps;
-            position: absolute;
-            background-color: $primarycolor;
-            top: 0;
-            left: 0;
-            transform: translateY(50%);
-            border-radius: 16px 16px ;
-            width: 28px;
-            height: 28px;
-            color: white;
-            margin-left: -16px;
-        }
-        a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-        i {
-            padding-right: 30px;
-            color: gray;
-        }
-        .fa-mobile-screen-button {
-            padding-left: 16px;
-        }
+
+    li:before {
+        @include flex-center;
+        content: "" counter(steps);
+        counter-increment: steps;
+        position: absolute;
+        background-color: $primarycolor;
+        top: 0;
+        left: 0;
+        transform: translateY(50%);
+        border-radius: 16px 16px;
+        width: 28px;
+        height: 28px;
+        color: white;
+        margin-left: -16px;
     }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    i {
+        padding-right: 30px;
+        color: gray;
+    }
+
+    .fa-mobile-screen-button {
+        padding-left: 16px;
+    }
+}
+
+.restaurant {
+    padding: 16px;
+
+    .restaurant__title {
+        font-weight: 800;
+    }
+
+    .restaurant__list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .restaurant__list article {
+        height: 240px;
+        display: flex;
+        overflow: hidden;
+        flex: 1 0 100%;
+        flex-direction: column;
+        border-radius: 16px 16px;
+        box-shadow: 1px 2px 5px rgb(216, 215, 215);
+        
+    }
+
+    .restaurant__list img {
+        height: 230px;
+        width: 100%;
+    }
+ .restaurant__list .fa-heart {
+    justify-content: flex-end;
+ }
+
+}
