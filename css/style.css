@@ -76,7 +76,7 @@ body {
   align-items: center;
   margin-left: 100px;
 }
-.localisation .localisation__text {
+.localisation .localisation_text {
   padding-left: 10px;
   border: none;
   font-size: 20px;
@@ -93,14 +93,14 @@ body {
   background-color: rgb(245, 241, 250);
   padding: 20px 16px 50px 20px;
 }
-.presentation .presentation__text {
+.presentation .presentation_text {
   text-align: center;
   padding-bottom: 16px;
 }
-.presentation .presentation__text h1 {
+.presentation .presentation_text h1 {
   font-weight: bold;
 }
-.presentation .presentation__btn {
+.presentation .presentation_btn {
   border-radius: 35px 35px;
   padding: 16px 30px 16px 30px;
   text-decoration: none;
@@ -161,16 +161,16 @@ body {
 .restaurant {
   padding: 16px;
 }
-.restaurant .restaurant__title {
+.restaurant .restaurant_title {
   font-weight: 800;
 }
-.restaurant .restaurant__list {
+.restaurant .restaurant_list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
 }
-.restaurant .restaurant__list article {
+.restaurant .restaurant_list article {
   height: 240px;
   display: flex;
   overflow: hidden;
@@ -178,13 +178,41 @@ body {
   flex-direction: column;
   border-radius: 16px 16px;
   box-shadow: 1px 2px 5px rgb(216, 215, 215);
+  position: relative;
 }
-.restaurant .restaurant__list img {
+.restaurant .restaurant_list article .new {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: #32b091;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+.restaurant .restaurant_list .restaurant_description {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+.restaurant .restaurant_list img {
   height: 230px;
   width: 100%;
 }
-.restaurant .restaurant__list .fa-heart {
+.restaurant .restaurant_list .restaurant_name {
+  margin: 0px;
+  border: 2px dotted yellowgreen;
+  width: 80%;
+}
+.restaurant .restaurant_list .restaurant_heart {
+  display: flex;
   justify-content: flex-end;
+  width: 60px;
+  position: relative;
+  border: 2px dotted rgb(48, 205, 233);
 }
 
 /*# sourceMappingURL=style.css.map */
