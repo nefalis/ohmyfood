@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto-Regular';
+
+    h1 {
+        font-family: 'Shrikhand';
+        font-size: 26px;
+    }
+
+    h2 {
+        font-family: 'Roboto-Black';
+        font-size: 26px;
+    }
+
+    h3 {
+        font-family: 'Shrikhand';
+    }
+}
+
+.heading_img {
+    width: 100%;
+    height: 200px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.container_menu {
+    display: flex;
+    border: 2px solid greenyellow;
+    border-radius: 25px 25px 0px 0px;
+    flex-direction: column;
+    position: relative;
+    top: -25px;
+    background-color: white;
+    width: 100%;
+
+    .btn {
+        padding: 10px 25px;
+        border-radius: 20px;
+        @include flex-center;
+        align-self: center;
+        width: 117px;
+        color: white;
+        background: linear-gradient(0.47turn, $secondarycolor, $primarycolor);
+        cursor: pointer;
+    }
+}
+
+.restaurant_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/** menu **/
+
+.menu_categorie {
+    padding: 16px;
+
+    h3 {
+        font-weight: lighter;
+    }
+
+    .horizontal_line {
+        flex-wrap: wrap;
+        display: flex;
+        border: 2px solid $tertiarycolor;
+        width: 40px;
+        margin-top: 5px;
+    }
+}
+
+.card_list {
+
+    .menu_card {
+        border: 2px solid palevioletred;
+        border-radius: 25px;
+        display: flex;
+        height: 66px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5px;
+        overflow: hidden;
+
+        .card_content {
+            border: 2px solid yellow;
+            overflow: hidden;
+
+            h4 {
+                margin: 0px;
+            }
+
+            p {
+                margin: 0px;
+            }
+        }
+
+        .card_price {
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .card_check {
+            @include flex-center;
+            background: $tertiarycolor;
+            color: white;
+            width: 55px;
+            height: 70px;
+            font-size: 20px;
+            
+        }
+    }
+}

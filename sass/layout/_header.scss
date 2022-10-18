@@ -4,15 +4,23 @@ body {
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 20px;
     position: relative;
     box-shadow: 0px 4px 8px rgb(197, 197, 197);
 
-    .header__logo {
+    .header_logo {
         height: 35px;
+    }
+
+    a {
+        position: absolute;
+        top: 36px;
+        left: 20px;
+        font-size: 20px;
+        color: black;
     }
 
 }

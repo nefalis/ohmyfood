@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** utils **/
 /** couleurs **/
 /** layout **/
@@ -7,15 +8,52 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 20px;
   position: relative;
   box-shadow: 0px 4px 8px rgb(197, 197, 197);
 }
-.header .header__logo {
+.header .header_logo {
   height: 35px;
+}
+.header a {
+  position: absolute;
+  top: 36px;
+  left: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+body {
+  margin: 0px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+.footer h3 {
+  font-weight: bold;
+  font-size: 28x;
+  padding-left: 16px;
+}
+.footer .footer_list {
+  list-style-type: none;
+  padding-left: 16px;
+}
+.footer .footer_list li {
+  padding: 4px;
+}
+.footer .footer_list a {
+  text-decoration: none;
+  color: white;
+}
+.footer .footer_list .fa-solid {
+  padding-right: 7px;
 }
 
 /** base **/
@@ -39,30 +77,24 @@ body {
   font-family: "Roboto-Black";
   src: url("fonts/Roboto/Roboto-Black.ttf") format("truetype");
 }
-body {
-  font-family: "Roboto-Regular";
-}
-
-h1 {
-  font-family: "Shrikhand";
-  font-size: 26px;
-}
-
-h2 {
-  font-family: "Roboto-Black";
-  font-size: 26px;
-}
-
-h3 {
-  font-family: "Shrikhand";
-  font-weight: lighter;
-}
-
 /** page **/
 body {
   margin: 0px;
+  font-family: "Roboto-Regular";
+}
+body h1 {
+  font-family: "Shrikhand";
+  font-size: 26px;
+}
+body h2 {
+  font-family: "Roboto-Black";
+  font-size: 26px;
+}
+body h3 {
+  font-family: "Shrikhand";
 }
 
+/** localisation **/
 .localisation {
   display: flex;
   align-items: center;
@@ -85,6 +117,7 @@ body {
   color: black;
 }
 
+/** présentation **/
 .presentation {
   display: flex;
   align-items: center;
@@ -108,25 +141,28 @@ body {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
 }
 
+/** fonctionnement **/
 .fonctionnement {
   padding: 0px 16px;
   display: flex;
   flex-direction: column;
 }
+.fonctionnement .fonctionnement_list {
+  width: 100%;
+}
 .fonctionnement ol {
   counter-reset: steps;
   padding-left: 16px;
-  gap: 16px;
 }
 .fonctionnement li {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 350px;
   height: 60px;
   border-radius: 20px 20px;
   box-shadow: 1px 2px 5px rgb(216, 215, 215);
+  margin: 25px;
 }
 .fonctionnement li:before {
   display: flex;
@@ -145,6 +181,9 @@ body {
   color: white;
   margin-left: -16px;
 }
+.fonctionnement li:hover {
+  background-color: #f7f2fc;
+}
 .fonctionnement a {
   text-decoration: none;
   color: black;
@@ -157,7 +196,11 @@ body {
 .fonctionnement .fa-mobile-screen-button {
   padding-left: 16px;
 }
+.fonctionnement i:hover {
+  color: #9356DC;
+}
 
+/** restaurant **/
 .restaurant {
   padding: 16px;
 }
@@ -169,9 +212,14 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
+  /** a modifier +++ **/
+}
+.restaurant .restaurant_list a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
 }
 .restaurant .restaurant_list article {
-  height: 240px;
   display: flex;
   overflow: hidden;
   flex: 1 0 100%;
@@ -196,23 +244,147 @@ body {
 .restaurant .restaurant_list .restaurant_description {
   display: flex;
   width: 100%;
-  height: 100px;
+  height: 80px;
 }
 .restaurant .restaurant_list img {
   height: 230px;
   width: 100%;
 }
 .restaurant .restaurant_list .restaurant_name {
-  margin: 0px;
   border: 2px dotted yellowgreen;
   width: 80%;
+  padding: 16px 0px 16px 10px;
+}
+.restaurant .restaurant_list .restaurant_name h3 {
+  margin: 0px;
+  font-weight: 600;
+}
+.restaurant .restaurant_list .restaurant_name p {
+  margin: 0px;
 }
 .restaurant .restaurant_list .restaurant_heart {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
   width: 60px;
   position: relative;
   border: 2px dotted rgb(48, 205, 233);
+  background-color: pink;
+  transition: 0.5s;
+}
+.restaurant .restaurant_list .fa-heart:hover {
+  transform: scaleY(0);
+  transition: transform 2000ms;
+  color: #FF79DA;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto-Regular";
+}
+body h1 {
+  font-family: "Shrikhand";
+  font-size: 26px;
+}
+body h2 {
+  font-family: "Roboto-Black";
+  font-size: 26px;
+}
+body h3 {
+  font-family: "Shrikhand";
+}
+
+.heading_img {
+  width: 100%;
+  height: 200px;
+}
+.heading_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container_menu {
+  display: flex;
+  border: 2px solid greenyellow;
+  border-radius: 25px 25px 0px 0px;
+  flex-direction: column;
+  position: relative;
+  top: -25px;
+  background-color: white;
+  width: 100%;
+}
+.container_menu .btn {
+  padding: 10px 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 117px;
+  color: white;
+  background: linear-gradient(0.47turn, #FF79DA, #9356DC);
+  cursor: pointer;
+}
+
+.restaurant_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/** menu **/
+.menu_categorie {
+  padding: 16px;
+}
+.menu_categorie h3 {
+  font-weight: lighter;
+}
+.menu_categorie .horizontal_line {
+  flex-wrap: wrap;
+  display: flex;
+  border: 2px solid #99E2D0;
+  width: 40px;
+  margin-top: 5px;
+}
+
+.card_list .menu_card {
+  border: 2px solid palevioletred;
+  border-radius: 25px;
+  display: flex;
+  height: 66px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+  overflow: hidden;
+}
+.card_list .menu_card .card_content {
+  border: 2px solid yellow;
+  overflow: hidden;
+}
+.card_list .menu_card .card_content h4 {
+  margin: 0px;
+}
+.card_list .menu_card .card_content p {
+  margin: 0px;
+}
+.card_list .menu_card .card_price {
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+}
+.card_list .menu_card .card_check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  color: white;
+  width: 55px;
+  height: 70px;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

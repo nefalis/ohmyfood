@@ -1,7 +1,23 @@
 body {
     margin: 0px;
+    font-family: 'Roboto-Regular';
+
+    h1 {
+        font-family: 'Shrikhand';
+        font-size: 26px;
+    }
+
+    h2 {
+        font-family: 'Roboto-Black';
+        font-size: 26px;
+    }
+
+    h3 {
+        font-family: 'Shrikhand';
+    }
 }
 
+/** localisation **/
 .localisation {
     @include flex-center;
     height: 60px;
@@ -24,6 +40,7 @@ body {
     }
 }
 
+/** présentation **/
 .presentation {
     @include flex-center;
     flex-direction: column;
@@ -48,25 +65,29 @@ body {
     }
 }
 
+/** fonctionnement **/
+
 .fonctionnement {
     padding: 0px 16px;
     display: flex;
     flex-direction: column;
 
-    ol {
+    .fonctionnement_list {
+        width: 100%;
+    }
 
+    ol {
         counter-reset: steps;
         padding-left: 16px;
-        gap: 16px;
     }
 
     li {
         @include flex-center;
         position: relative;
-        width: 350px;
         height: 60px;
         border-radius: 20px 20px;
         box-shadow: 1px 2px 5px rgb(216, 215, 215);
+        margin: 25px;
     }
 
     li:before {
@@ -85,6 +106,10 @@ body {
         margin-left: -16px;
     }
 
+    li:hover {
+        background-color: lighten($primarycolor, 37%);
+    }
+
     a {
         text-decoration: none;
         color: black;
@@ -99,7 +124,13 @@ body {
     .fa-mobile-screen-button {
         padding-left: 16px;
     }
+
+    i:hover {
+        color: $primarycolor;
+    }
 }
+
+/** restaurant **/
 
 .restaurant {
     padding: 16px;
@@ -114,8 +145,13 @@ body {
         flex-direction: column;
         gap: 20px;
 
+        a {
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+
         article {
-            height: 240px;
             display: flex;
             overflow: hidden;
             flex: 1 0 100%;
@@ -123,7 +159,9 @@ body {
             border-radius: 16px 16px;
             box-shadow: 1px 2px 5px rgb(216, 215, 215);
             position: relative;
-          
+
+
+
             .new {
                 width: 80px;
                 height: 30px;
@@ -134,41 +172,55 @@ body {
                 position: absolute;
                 top: 10%;
                 right: 5%;
-
             }
         }
 
         .restaurant_description {
             display: flex;
             width: 100%;
-            height: 100px;
-          
+            height: 80px;
         }
+
         img {
             height: 230px;
             width: 100%;
+
         }
 
-        .restaurant_name  {
-          margin: 0px;  
-          border: 2px dotted yellowgreen;
-          width: 80%;
-    
+        .restaurant_name {
+            border: 2px dotted yellowgreen;
+            width: 80%;
+            padding: 16px 0px 16px 10px;
+
+            h3 {
+                margin: 0px;
+                font-weight: 600;
+            }
+
+            p {
+                margin: 0px;
+            }
         }
+
         .restaurant_heart {
             display: flex;
             justify-content: flex-end;
-           width: 60px;
-           position: relative;
+            align-items: center;
+            padding-right: 16px;
+            width: 60px;
+            position: relative;
             border: 2px dotted rgb(48, 205, 233);
+            background-color: pink;
+            transition: 0.5s;
 
-            
+        }
+
+        /** a modifier +++ **/
+        .fa-heart:hover {
+            transform: scaleY(0);
+            transition: transform 2000ms;
+            color: $secondarycolor;
+
         }
     }
-
-
-
-
-
-
 }

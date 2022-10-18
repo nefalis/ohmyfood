@@ -5,9 +5,11 @@
 
 /** layout **/
 @import "layout/header";
+@import "layout/footer";
 
 /** base **/
 @import "base/typography";
 
 /** page **/
 @import "pages/home";
+@import "pages/menu";
