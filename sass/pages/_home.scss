@@ -134,6 +134,7 @@ body {
 
 .restaurant {
     padding: 16px;
+    background: $lightgray;
 
     .restaurant_title {
         font-weight: 800;
@@ -142,7 +143,7 @@ body {
     .restaurant_list {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
+        
         gap: 20px;
 
         a {
@@ -159,6 +160,8 @@ body {
             border-radius: 16px 16px;
             box-shadow: 1px 2px 5px rgb(216, 215, 215);
             position: relative;
+            background: white;
+
 
 
 
@@ -179,6 +182,7 @@ body {
             display: flex;
             width: 100%;
             height: 80px;
+
         }
 
         img {
@@ -188,7 +192,6 @@ body {
         }
 
         .restaurant_name {
-            border: 2px dotted yellowgreen;
             width: 80%;
             padding: 16px 0px 16px 10px;
 
@@ -209,18 +212,18 @@ body {
             padding-right: 16px;
             width: 60px;
             position: relative;
-            border: 2px dotted rgb(48, 205, 233);
-            background-color: pink;
             transition: 0.5s;
-
         }
 
-        /** a modifier +++ **/
         .fa-heart:hover {
-            transform: scaleY(0);
-            transition: transform 2000ms;
-            color: $secondarycolor;
-
+            position: absolute;
+            font-weight: 800;
+            background-image: linear-gradient(0turn, $secondarycolor, $primarycolor);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+            transition-duration: 1s;
+            
         }
     }
 }

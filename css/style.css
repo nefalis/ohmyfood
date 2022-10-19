@@ -203,6 +203,7 @@ body h3 {
 /** restaurant **/
 .restaurant {
   padding: 16px;
+  background: #f1eded;
 }
 .restaurant .restaurant_title {
   font-weight: 800;
@@ -210,9 +211,7 @@ body h3 {
 .restaurant .restaurant_list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   gap: 20px;
-  /** a modifier +++ **/
 }
 .restaurant .restaurant_list a {
   text-decoration: none;
@@ -227,6 +226,7 @@ body h3 {
   border-radius: 16px 16px;
   box-shadow: 1px 2px 5px rgb(216, 215, 215);
   position: relative;
+  background: white;
 }
 .restaurant .restaurant_list article .new {
   width: 80px;
@@ -251,7 +251,6 @@ body h3 {
   width: 100%;
 }
 .restaurant .restaurant_list .restaurant_name {
-  border: 2px dotted yellowgreen;
   width: 80%;
   padding: 16px 0px 16px 10px;
 }
@@ -269,14 +268,16 @@ body h3 {
   padding-right: 16px;
   width: 60px;
   position: relative;
-  border: 2px dotted rgb(48, 205, 233);
-  background-color: pink;
   transition: 0.5s;
 }
 .restaurant .restaurant_list .fa-heart:hover {
-  transform: scaleY(0);
-  transition: transform 2000ms;
-  color: #FF79DA;
+  position: absolute;
+  font-weight: 800;
+  background-image: linear-gradient(0turn, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  transition-duration: 1s;
 }
 
 body {
@@ -385,6 +386,93 @@ body h3 {
   width: 55px;
   height: 70px;
   font-size: 20px;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.body {
+  overflow: hidden;
+}
+
+.loader_ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.loader_ul .loader_li {
+  list-style: none;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: white;
+  margin: 0 20px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.loader_ul .fa {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate -50%, -50%;
+  font-size: 48px;
+  color: #99E2D0;
+  transition: 0.5s;
+}
+
+.loader_li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FF79DA;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.loader_li:before {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+.loader_li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: 0.5s;
+  opacity: 1;
+  border: 2px dashed #9356DC;
+  box-sizing: border-box;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
