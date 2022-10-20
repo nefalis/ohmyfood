@@ -1,20 +1,6 @@
 body {
     margin: 0px;
     font-family: 'Roboto-Regular';
-
-    h1 {
-        font-family: 'Shrikhand';
-        font-size: 26px;
-    }
-
-    h2 {
-        font-family: 'Roboto-Black';
-        font-size: 26px;
-    }
-
-    h3 {
-        font-family: 'Shrikhand';
-    }
 }
 
 /** localisation **/
@@ -51,8 +37,10 @@ body {
         text-align: center;
         padding-bottom: 16px;
 
+
         h1 {
             font-weight: bold;
+            font-family: 'Shrikhand';
         }
     }
 
@@ -106,9 +94,6 @@ body {
         margin-left: -16px;
     }
 
-    li:hover {
-        background-color: lighten($primarycolor, 37%);
-    }
 
     a {
         text-decoration: none;
@@ -125,19 +110,25 @@ body {
         padding-left: 16px;
     }
 
-    i:hover {
-        color: $primarycolor;
+li:hover {
+     background-color: lighten($primarycolor, 37%);
     }
+
+    li:hover i {
+        color: $primarycolor;
+}
+
 }
 
 /** restaurant **/
 
 .restaurant {
-    padding: 16px;
+    padding: 60px 16px 16px 16px;
     background: $lightgray;
 
-    .restaurant_title {
+    .restaurant_h2 {
         font-weight: 800;
+
     }
 
     .restaurant_list {
@@ -161,9 +152,6 @@ body {
             box-shadow: 1px 2px 5px rgb(216, 215, 215);
             position: relative;
             background: white;
-
-
-
 
             .new {
                 width: 80px;
@@ -197,7 +185,7 @@ body {
 
             h3 {
                 margin: 0px;
-                font-weight: 600;
+                font-weight: bold;
             }
 
             p {

@@ -1,20 +1,6 @@
 body {
     margin: 0px;
-    font-family: 'Roboto-Regular';
 
-    h1 {
-        font-family: 'Shrikhand';
-        font-size: 26px;
-    }
-
-    h2 {
-        font-family: 'Roboto-Black';
-        font-size: 26px;
-    }
-
-    h3 {
-        font-family: 'Shrikhand';
-    }
 }
 
 .heading_img {
@@ -30,7 +16,6 @@ body {
 
 .container_menu {
     display: flex;
-    border: 2px solid greenyellow;
     border-radius: 25px 25px 0px 0px;
     flex-direction: column;
     position: relative;
@@ -38,6 +23,7 @@ body {
     background-color: white;
     width: 100%;
 
+    /** bouton commander **/
     .btn {
         padding: 10px 25px;
         border-radius: 20px;
@@ -47,7 +33,29 @@ body {
         color: white;
         background: linear-gradient(0.47turn, $secondarycolor, $primarycolor);
         cursor: pointer;
+    } /** fin bouton commander **/
+
+    .restaurant_heart {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 16px;
+        width: 60px;
+        position: relative;
+        transition: 0.5s;
     }
+
+    .fa-heart:hover {
+        position: absolute;
+        font-weight: 800;
+        background-image: linear-gradient(0turn, $secondarycolor, $primarycolor);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 28px;
+        transition-duration: 1s;
+        
+    }
+    
 }
 
 .restaurant_title {
@@ -55,12 +63,19 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
+    h2 {
+        font-family: 'Shrikhand';
+        font-weight: bold;
+        font-size: 28px;
+    }
 }
 
 /** menu **/
 
 .menu_categorie {
     padding: 16px;
+
 
     h3 {
         font-weight: lighter;
@@ -76,24 +91,26 @@ body {
 }
 
 .card_list {
-
+ 
     .menu_card {
-        border: 2px solid palevioletred;
         border-radius: 25px;
         display: flex;
         height: 66px;
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        padding-left: 5px;
+        padding-left: 16px;
         overflow: hidden;
+        margin-bottom: 16px;
+        box-shadow: 1px 2px 5px rgb(216, 215, 215);
+       
 
         .card_content {
-            border: 2px solid yellow;
             overflow: hidden;
-
+        
             h4 {
                 margin: 0px;
+                padding-bottom: 5px;
             }
 
             p {
@@ -114,7 +131,9 @@ body {
             width: 55px;
             height: 70px;
             font-size: 20px;
-            
+
         }
     }
+
+   
 }

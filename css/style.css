@@ -82,17 +82,6 @@ body {
   margin: 0px;
   font-family: "Roboto-Regular";
 }
-body h1 {
-  font-family: "Shrikhand";
-  font-size: 26px;
-}
-body h2 {
-  font-family: "Roboto-Black";
-  font-size: 26px;
-}
-body h3 {
-  font-family: "Shrikhand";
-}
 
 /** localisation **/
 .localisation {
@@ -132,6 +121,7 @@ body h3 {
 }
 .presentation .presentation_text h1 {
   font-weight: bold;
+  font-family: "Shrikhand";
 }
 .presentation .presentation_btn {
   border-radius: 35px 35px;
@@ -181,9 +171,6 @@ body h3 {
   color: white;
   margin-left: -16px;
 }
-.fonctionnement li:hover {
-  background-color: #f7f2fc;
-}
 .fonctionnement a {
   text-decoration: none;
   color: black;
@@ -196,16 +183,19 @@ body h3 {
 .fonctionnement .fa-mobile-screen-button {
   padding-left: 16px;
 }
-.fonctionnement i:hover {
+.fonctionnement li:hover {
+  background-color: #f7f2fc;
+}
+.fonctionnement li:hover i {
   color: #9356DC;
 }
 
 /** restaurant **/
 .restaurant {
-  padding: 16px;
+  padding: 60px 16px 16px 16px;
   background: #f1eded;
 }
-.restaurant .restaurant_title {
+.restaurant .restaurant_h2 {
   font-weight: 800;
 }
 .restaurant .restaurant_list {
@@ -256,7 +246,7 @@ body h3 {
 }
 .restaurant .restaurant_list .restaurant_name h3 {
   margin: 0px;
-  font-weight: 600;
+  font-weight: bold;
 }
 .restaurant .restaurant_list .restaurant_name p {
   margin: 0px;
@@ -282,18 +272,6 @@ body h3 {
 
 body {
   margin: 0px;
-  font-family: "Roboto-Regular";
-}
-body h1 {
-  font-family: "Shrikhand";
-  font-size: 26px;
-}
-body h2 {
-  font-family: "Roboto-Black";
-  font-size: 26px;
-}
-body h3 {
-  font-family: "Shrikhand";
 }
 
 .heading_img {
@@ -308,13 +286,14 @@ body h3 {
 
 .container_menu {
   display: flex;
-  border: 2px solid greenyellow;
   border-radius: 25px 25px 0px 0px;
   flex-direction: column;
   position: relative;
   top: -25px;
   background-color: white;
   width: 100%;
+  /** bouton commander **/
+  /** fin bouton commander **/
 }
 .container_menu .btn {
   padding: 10px 25px;
@@ -328,12 +307,35 @@ body h3 {
   background: linear-gradient(0.47turn, #FF79DA, #9356DC);
   cursor: pointer;
 }
+.container_menu .restaurant_heart {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
+  width: 60px;
+  position: relative;
+  transition: 0.5s;
+}
+.container_menu .fa-heart:hover {
+  position: absolute;
+  font-weight: 800;
+  background-image: linear-gradient(0turn, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  transition-duration: 1s;
+}
 
 .restaurant_title {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+.restaurant_title h2 {
+  font-family: "Shrikhand";
+  font-weight: bold;
+  font-size: 28px;
 }
 
 /** menu **/
@@ -352,22 +354,23 @@ body h3 {
 }
 
 .card_list .menu_card {
-  border: 2px solid palevioletred;
   border-radius: 25px;
   display: flex;
   height: 66px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding-left: 5px;
+  padding-left: 16px;
   overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 1px 2px 5px rgb(216, 215, 215);
 }
 .card_list .menu_card .card_content {
-  border: 2px solid yellow;
   overflow: hidden;
 }
 .card_list .menu_card .card_content h4 {
   margin: 0px;
+  padding-bottom: 5px;
 }
 .card_list .menu_card .card_content p {
   margin: 0px;
@@ -442,7 +445,6 @@ body h3 {
   height: 100%;
   background: #FF79DA;
   border-radius: 50%;
-  transform: scale(1);
   transition: 0.5s;
   opacity: 1;
 }
@@ -461,7 +463,6 @@ body h3 {
   height: 100%;
   background: transparent;
   border-radius: 50%;
-  transform: scale(1);
   transition: 0.5s;
   opacity: 1;
   border: 2px dashed #9356DC;
@@ -471,7 +472,7 @@ body h3 {
 
 @keyframes animate {
   100% {
-    transform: scale(1) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
