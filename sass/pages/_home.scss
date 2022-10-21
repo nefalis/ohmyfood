@@ -3,6 +3,8 @@ body {
     font-family: 'Roboto-Regular';
 }
 
+
+
 /** localisation **/
 .localisation {
     @include flex-center;
@@ -76,6 +78,7 @@ body {
         border-radius: 20px 20px;
         box-shadow: 1px 2px 5px rgb(216, 215, 215);
         margin: 25px;
+        background: $lightgray;
     }
 
     li:before {
@@ -110,20 +113,20 @@ body {
         padding-left: 16px;
     }
 
-li:hover {
-     background-color: lighten($primarycolor, 37%);
+    li:hover {
+        background-color: lighten($primarycolor, 37%);
     }
 
     li:hover i {
         color: $primarycolor;
-}
+    }
 
 }
 
 /** restaurant **/
 
 .restaurant {
-    padding: 60px 16px 16px 16px;
+    padding: 60px 16px 50px 16px;
     background: $lightgray;
 
     .restaurant_h2 {
@@ -134,7 +137,7 @@ li:hover {
     .restaurant_list {
         display: flex;
         flex-wrap: wrap;
-        
+
         gap: 20px;
 
         a {
@@ -174,14 +177,15 @@ li:hover {
         }
 
         img {
-            height: 230px;
+            height: 160px;
             width: 100%;
+            object-fit: cover;
 
         }
 
         .restaurant_name {
             width: 80%;
-            padding: 16px 0px 16px 10px;
+            padding: 16px 0px 16px 14px;
 
             h3 {
                 margin: 0px;
@@ -201,6 +205,7 @@ li:hover {
             width: 60px;
             position: relative;
             transition: 0.5s;
+
         }
 
         .fa-heart:hover {
@@ -208,10 +213,10 @@ li:hover {
             font-weight: 800;
             background-image: linear-gradient(0turn, $secondarycolor, $primarycolor);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 28px;
-            transition-duration: 1s;
-            
+            transition-duration: 2s;
         }
     }
 }
