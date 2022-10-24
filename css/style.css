@@ -2,6 +2,7 @@
 /** utils **/
 /** couleurs **/
 /** layout **/
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap';
 body {
   margin: 0px;
 }
@@ -37,9 +38,11 @@ body {
   color: white;
 }
 .footer h3 {
-  font-weight: bold;
-  font-size: 28x;
+  font-weight: 100;
+  font-size: 22px;
   padding-left: 16px;
+  font-family: "Shrikhand";
+  margin: 22px 0px 5px 0px;
 }
 .footer .footer_list {
   list-style-type: none;
@@ -80,7 +83,7 @@ body {
 /** page **/
 body {
   margin: 0px;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
 }
 
 /** localisation **/
@@ -119,9 +122,12 @@ body {
   text-align: center;
   padding-bottom: 16px;
 }
-.presentation .presentation_text h1 {
+.presentation .presentation_text h2 {
   font-weight: bold;
-  font-family: "Shrikhand";
+  font-size: 25px;
+}
+.presentation .presentation_text p {
+  font-size: 16px;
 }
 .presentation .presentation_btn {
   border-radius: 35px 35px;
@@ -129,6 +135,10 @@ body {
   text-decoration: none;
   color: white;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 1px 5px 10px rgba(49, 48, 48, 0.29);
+}
+.presentation .presentation_btn:hover {
+  box-shadow: 5px 5px 10px rgba(49, 48, 48, 0.5);
 }
 
 /** fonctionnement **/
@@ -136,6 +146,10 @@ body {
   padding: 0px 16px;
   display: flex;
   flex-direction: column;
+}
+.fonctionnement .fonctionnement_title {
+  font-size: 22px;
+  font-weight: 800;
 }
 .fonctionnement .fonctionnement_list {
   width: 100%;
@@ -151,7 +165,7 @@ body {
   position: relative;
   height: 60px;
   border-radius: 20px 20px;
-  box-shadow: 1px 2px 5px rgb(216, 215, 215);
+  box-shadow: 1px 5px 10px rgba(49, 48, 48, 0.29);
   margin: 25px;
   background: #f1eded;
 }
@@ -196,8 +210,9 @@ body {
   padding: 60px 16px 50px 16px;
   background: #f1eded;
 }
-.restaurant .restaurant_h2 {
+.restaurant .restaurant_h3 {
   font-weight: 800;
+  font-size: 22px;
 }
 .restaurant .restaurant_list {
   display: flex;
@@ -215,7 +230,7 @@ body {
   flex: 1 0 100%;
   flex-direction: column;
   border-radius: 16px 16px;
-  box-shadow: 1px 2px 5px rgb(216, 215, 215);
+  box-shadow: 1px 5px 10px rgba(49, 48, 48, 0.29);
   position: relative;
   background: white;
 }
@@ -246,9 +261,10 @@ body {
   width: 80%;
   padding: 16px 0px 16px 14px;
 }
-.restaurant .restaurant_list .restaurant_name h3 {
+.restaurant .restaurant_list .restaurant_name h4 {
   margin: 0px;
   font-weight: bold;
+  font-size: 20px;
 }
 .restaurant .restaurant_list .restaurant_name p {
   margin: 0px;
@@ -275,6 +291,7 @@ body {
 
 body {
   margin: 0px;
+  font-family: "Roboto";
 }
 
 .heading_img {
@@ -292,15 +309,17 @@ body {
   border-radius: 25px 25px 0px 0px;
   flex-direction: column;
   position: relative;
-  top: -25px;
   width: 100%;
   background-color: #f1eded;
+  margin-top: -25px;
+  padding-bottom: 40px;
   /** bouton commander **/
   /** fin bouton commander **/
+  /** mettre active ?  **/
 }
 .container_menu .btn {
-  padding: 10px 25px;
-  border-radius: 20px;
+  padding: 16px 40px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -309,6 +328,10 @@ body {
   color: white;
   background: linear-gradient(0.47turn, #FF79DA, #9356DC);
   cursor: pointer;
+  box-shadow: 1px 5px 10px rgba(49, 48, 48, 0.29);
+}
+.container_menu .btn:hover {
+  box-shadow: 5px 5px 10px rgba(49, 48, 48, 0.5);
 }
 .container_menu .restaurant_heart {
   display: flex;
@@ -327,7 +350,7 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 28px;
-  transition-duration: 1s;
+  transition-duration: 2s;
 }
 
 .restaurant_title {
@@ -338,7 +361,7 @@ body {
 }
 .restaurant_title h2 {
   font-family: "Shrikhand";
-  font-weight: bold;
+  font-weight: 100;
   font-size: 28px;
 }
 
@@ -347,7 +370,7 @@ body {
   padding: 16px;
 }
 .menu_categorie h3 {
-  font-weight: lighter;
+  font-weight: 300;
 }
 .menu_categorie .horizontal_line {
   flex-wrap: wrap;
@@ -357,65 +380,84 @@ body {
   margin-top: 5px;
 }
 
-.card_list .menu_card {
-  border-radius: 25px;
+.menu_card {
   display: flex;
-  height: 66px;
-  width: 100%;
-  align-items: center;
   justify-content: space-between;
-  padding-left: 16px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 1px 5px 10px rgba(49, 48, 48, 0.29);
+  height: 66px;
+  background: white;
   margin-bottom: 16px;
-  box-shadow: 1px 2px 5px rgb(216, 215, 215);
 }
-.card_list .menu_card .card_content {
+
+.card_content {
+  padding: 5px 15px;
+  align-self: center;
   overflow: hidden;
-  width: 560px;
 }
-.card_list .menu_card .card_content h4 {
-  margin: 0px;
+.card_content h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.card_content p {
+  font-size: 14px;
+}
+
+.card_content h4,
+.card_content p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
   padding-bottom: 5px;
 }
-.card_list .menu_card .card_content p {
-  margin: 0px;
-}
-.card_list .menu_card .card_price {
-  font-weight: bold;
+
+.card_price {
   display: flex;
-  width: 50px;
+  align-items: flex-end;
+  font-weight: bold;
+  gap: 15px;
+  margin-right: -67px;
+  transition: all 0.5s ease-in-out;
 }
-.card_list .menu_card .card_check {
+
+.card_price span {
+  font-weight: 700;
+  padding-top: 10px;
+  align-self: center;
+}
+
+.card_check {
+  height: 66px;
+  padding: 0 19px;
+  background-color: #99E2D0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #99E2D0;
+}
+
+.fa-circle-check {
+  align-self: center;
+  transform: rotate(180deg);
+  transition: all 0.7s ease-in-out;
   color: white;
-  width: 75px;
-  height: 70px;
-  font-size: 20px;
-  /*display: none;*/
+  font-size: 28px;
 }
-.card_list .menu_card .card_check .fa-circle-check {
-  transform: rotate(90deg);
+
+/** mettre active ?  **/
+.menu_card:hover .card_price {
+  margin-right: 0;
 }
-.card_list .menu_card .card_check:hover .fa-circle-check {
-  transform: rotate(-30deg);
-  transition: transform 0.7s ease-in-out;
-  /*display: block;*/
-  animation: slide 2s forwards;
-  cursor: pointer;
-}
-@keyframes slide {
-  100% {
-    left: 0;
-  }
+
+.menu_card:hover .fa-circle-check {
+  margin-right: 0;
+  rotate: 180deg;
 }
 
 .loader {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;

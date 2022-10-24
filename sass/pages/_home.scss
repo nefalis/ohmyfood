@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    font-family: 'Roboto-Regular';
+    font-family: 'Roboto';
 }
 
 
@@ -40,9 +40,13 @@ body {
         padding-bottom: 16px;
 
 
-        h1 {
+        h2 {
             font-weight: bold;
-            font-family: 'Shrikhand';
+            font-size: 25px;
+        }
+
+        p{
+            font-size: 16px;
         }
     }
 
@@ -52,7 +56,12 @@ body {
         text-decoration: none;
         color: white;
         background: linear-gradient(0deg, $primarycolor, $secondarycolor);
+        box-shadow: $box-shadow
     }
+    .presentation_btn:hover {
+        box-shadow: $box-shadow-hover;
+    }
+
 }
 
 /** fonctionnement **/
@@ -61,6 +70,11 @@ body {
     padding: 0px 16px;
     display: flex;
     flex-direction: column;
+
+    .fonctionnement_title {
+        font-size: 22px;
+        font-weight: 800;
+    }
 
     .fonctionnement_list {
         width: 100%;
@@ -76,7 +90,7 @@ body {
         position: relative;
         height: 60px;
         border-radius: 20px 20px;
-        box-shadow: 1px 2px 5px rgb(216, 215, 215);
+        box-shadow: $box-shadow;
         margin: 25px;
         background: $lightgray;
     }
@@ -129,8 +143,9 @@ body {
     padding: 60px 16px 50px 16px;
     background: $lightgray;
 
-    .restaurant_h2 {
+    .restaurant_h3 {
         font-weight: 800;
+        font-size: 22px;
 
     }
 
@@ -146,15 +161,18 @@ body {
             color: black;
         }
 
+
         article {
             display: flex;
             overflow: hidden;
             flex: 1 0 100%;
             flex-direction: column;
             border-radius: 16px 16px;
-            box-shadow: 1px 2px 5px rgb(216, 215, 215);
+            box-shadow: $box-shadow;
             position: relative;
             background: white;
+
+            
 
             .new {
                 width: 80px;
@@ -187,9 +205,10 @@ body {
             width: 80%;
             padding: 16px 0px 16px 14px;
 
-            h3 {
+            h4 {
                 margin: 0px;
                 font-weight: bold;
+                font-size: 20px;
             }
 
             p {
