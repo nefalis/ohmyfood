@@ -1,0 +1,44 @@
+@media screen and (min-width: 992px) {
+
+/** fonctionnement **/
+
+/* ne veut pas se mettre en row */
+.fonctionnement {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/** restaurant **/
+
+.restaurant_list {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    article {
+        flex: 1 0 45%;
+        display: flex;
+    }
+}
+
+
+/** menu **/
+
+.container_menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.menu_categorie {
+    width: 35%;
+}
+
+
+
+/** footer **/
+
+.footer {
+    flex-direction: row;
+}
+
+}
