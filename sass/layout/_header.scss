@@ -7,17 +7,25 @@ body {
     justify-content: space-around;
     align-items: center;
     padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 37px;
     position: relative;
     box-shadow: 0px 4px 8px rgb(197, 197, 197);
 
     .header_logo {
-        height: 35px;
+        height: 32px;
     }
 
-    a {
+    a img {
         position: absolute;
-        top: 36px;
+        top: 11px;
+        left: 86px;
+        padding-top: 10px;
+
+    }
+
+    a .fa-solid {
+        position: absolute;
+        top: 25px;
         left: 20px;
         font-size: 20px;
         color: black;

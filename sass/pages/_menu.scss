@@ -41,6 +41,7 @@ body {
     .btn:hover {
         box-shadow: $box-shadow-hover;
     }
+
     /** fin bouton commander **/
 
     .restaurant_heart {
@@ -53,7 +54,6 @@ body {
         transition: 0.5s;
     }
 
-    /** mettre active ?  **/
     .fa-heart:hover {
         position: absolute;
         font-weight: 800;
@@ -83,7 +83,7 @@ body {
 
 .menu_categorie {
     padding: 16px;
-    
+
     h3 {
         font-weight: 300;
     }
@@ -95,7 +95,7 @@ body {
         width: 40px;
         margin-top: 5px;
     }
-    
+
 }
 
 
@@ -108,34 +108,37 @@ body {
     height: 66px;
     background: white;
     margin-bottom: 16px;
-   animation: item_delay 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-  transform: scale(0);
+    animation: item_delay 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    transform: scale(0);
 }
-  .delay_1 {
+
+.delay_1 {
     animation-delay: 200ms;
-  }
-  .delay_2 {
+}
+
+.delay_2 {
     animation-delay: 300ms;
-  }
+}
 
-  .delay_3 {
+.delay_3 {
     animation-delay: 400ms;
-  }
+}
 
-  .delay_4 {
+.delay_4 {
     animation-delay: 500ms;
-  }
+}
 
 @keyframes item_delay {
     0% {
-      transform: scale(0)
+        transform: scale(0)
     }
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
 
 .card_content {
     padding: 5px 15px;
@@ -187,14 +190,13 @@ body {
 
 .fa-circle-check {
     align-self: center;
-    
+
     transform: rotate(180deg);
     transition: all .7s ease-in-out;
     color: white;
     font-size: 28px;
 }
 
-/** mettre active ?  **/
 .menu_card:hover .card_price {
     margin-right: 0;
 }

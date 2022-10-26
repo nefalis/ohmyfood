@@ -4,32 +4,51 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap';
 @media screen and (min-width: 992px) {
   /** fonctionnement **/
-  /* ne veut pas se mettre en row */
-  .fonctionnement {
-    display: flex;
+  .fonctionnement ol {
     flex-direction: row;
     flex-wrap: wrap;
+    display: flex;
+  }
+  .fonctionnement li {
+    width: 27%;
   }
   /** restaurant **/
-  .restaurant_list {
-    flex-wrap: wrap;
+  .restaurant {
     flex-direction: row;
+    flex-wrap: wrap;
   }
-  .restaurant_list article {
-    flex: 1 0 45%;
+  .fonctionnement {
     display: flex;
   }
+  .restaurant_list {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .restaurant_list article {
+    flex-direction: row;
+    width: 40%;
+  }
   /** menu **/
-  .container_menu {
+  .menu {
     flex-direction: row;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
   }
   .menu_categorie {
-    width: 35%;
+    width: 30%;
   }
   /** footer **/
   .footer {
     flex-direction: row;
+  }
+  .footer h3 {
+    justify-content: center;
+    display: flex;
+  }
+  .footer_list {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 /** layout **/
@@ -42,16 +61,22 @@ body {
   justify-content: space-around;
   align-items: center;
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 37px;
   position: relative;
   box-shadow: 0px 4px 8px rgb(197, 197, 197);
 }
 .header .header_logo {
-  height: 35px;
+  height: 32px;
 }
-.header a {
+.header a img {
   position: absolute;
-  top: 36px;
+  top: 11px;
+  left: 86px;
+  padding-top: 10px;
+}
+.header a .fa-solid {
+  position: absolute;
+  top: 25px;
   left: 20px;
   font-size: 20px;
   color: black;
@@ -137,6 +162,7 @@ body {
   font-weight: bold;
   background-color: #f1eded;
   color: black;
+  width: 220px;
 }
 
 /** présentation **/
@@ -183,6 +209,7 @@ body {
 }
 .fonctionnement .fonctionnement_list {
   width: 100%;
+  padding-bottom: 20px;
 }
 .fonctionnement ol {
   counter-reset: steps;
@@ -197,7 +224,7 @@ body {
   border-radius: 20px 20px;
   box-shadow: 1px 5px 10px rgba(49, 48, 48, 0.29);
   margin: 25px;
-  background: #f1eded;
+  background: rgb(245, 241, 250);
 }
 .fonctionnement li:before {
   display: flex;
@@ -238,15 +265,16 @@ body {
 /** restaurant **/
 .restaurant {
   padding: 60px 16px 50px 16px;
-  background: #f1eded;
+  background: rgb(245, 241, 250);
 }
 .restaurant .restaurant_h3 {
   font-weight: 800;
   font-size: 22px;
+  width: 90%;
 }
 .restaurant .restaurant_list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
 }
 .restaurant .restaurant_list a {
@@ -345,7 +373,6 @@ body {
   padding-bottom: 40px;
   /** bouton commander **/
   /** fin bouton commander **/
-  /** mettre active ?  **/
 }
 .container_menu .btn {
   padding: 16px 40px;
@@ -502,7 +529,6 @@ body {
   font-size: 28px;
 }
 
-/** mettre active ?  **/
 .menu_card:hover .card_price {
   margin-right: 0;
 }

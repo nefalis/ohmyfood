@@ -1,44 +1,73 @@
 @media screen and (min-width: 992px) {
 
-/** fonctionnement **/
+    /** fonctionnement **/
 
-/* ne veut pas se mettre en row */
-.fonctionnement {
+    .fonctionnement {
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+        ol {
+            flex-direction: row;
+            flex-wrap: wrap;
+            display: flex;
+        }
 
-/** restaurant **/
-
-.restaurant_list {
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    article {
-        flex: 1 0 45%;
-        display: flex;
+        li {
+            width: 27%;
+        }
     }
-}
+
+    /** restaurant **/
 
 
-/** menu **/
+    .restaurant {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-.container_menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.menu_categorie {
-    width: 35%;
-}
+    .fonctionnement {
+        display: flex;
+
+    }
+
+    .restaurant_list {
+        flex-wrap: wrap;
+        width: 100%;
+
+        article {
+            flex-direction: row;
+            width: 40%;
+        }
+    }
+
+
+    /** menu **/
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center
+    }
+
+    .menu_categorie {
+        width: 30%;
+    }
 
 
 
-/** footer **/
+    /** footer **/
 
-.footer {
-    flex-direction: row;
-}
+    .footer {
+        flex-direction: row;
+
+        h3 {
+            justify-content: center;
+            display: flex;
+        }
+    }
+
+    .footer_list {
+        display: flex;
+        justify-content: space-evenly;
+    }
 
 }

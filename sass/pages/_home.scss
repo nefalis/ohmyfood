@@ -25,6 +25,7 @@ body {
         font-weight: bold;
         background-color: $lightgray;
         color: black;
+        width: 220px;
     }
 }
 
@@ -78,6 +79,7 @@ body {
 
     .fonctionnement_list {
         width: 100%;
+        padding-bottom: 20px;
     }
 
     ol {
@@ -92,7 +94,7 @@ body {
         border-radius: 20px 20px;
         box-shadow: $box-shadow;
         margin: 25px;
-        background: $lightgray;
+        background: rgb(245, 241, 250);
     }
 
     li:before {
@@ -141,20 +143,18 @@ body {
 
 .restaurant {
     padding: 60px 16px 50px 16px;
-    background: $lightgray;
+    background:rgb(245, 241, 250);
 
     .restaurant_h3 {
         font-weight: 800;
         font-size: 22px;
-
+width: 90%;
     }
 
     .restaurant_list {
         display: flex;
-        flex-wrap: wrap;
-
+        flex-direction: column;
         gap: 20px;
-
         a {
             text-decoration: none;
             list-style: none;
