@@ -235,7 +235,26 @@ width: 90%;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 28px;
-            transition-duration: 2s;
+       
+            animation: heart_animation 1.5s;
+        }
+
+        @keyframes heart_animation {
+            0% {
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 40%;
+            }
+
+            70% {
+                opacity: 80%;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
     }
 }
