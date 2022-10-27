@@ -23,10 +23,11 @@
   .restaurant_list {
     flex-wrap: wrap;
     width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .restaurant_list article {
-    flex-direction: row;
-    width: 40%;
+    max-width: 49%;
   }
   /** menu **/
   .menu {
@@ -274,7 +275,7 @@ body {
 }
 .restaurant .restaurant_list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .restaurant .restaurant_list a {
@@ -421,7 +422,21 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 28px;
-  transition-duration: 2s;
+  animation: heart_animation 1.5s;
+}
+@keyframes heart_animation {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 40%;
+  }
+  70% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .restaurant_title {

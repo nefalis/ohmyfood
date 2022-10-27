@@ -3,7 +3,6 @@
     /** fonctionnement **/
 
     .fonctionnement {
-
         ol {
             flex-direction: row;
             flex-wrap: wrap;
@@ -17,7 +16,6 @@
 
     /** restaurant **/
 
-
     .restaurant {
         flex-direction: row;
         flex-wrap: wrap;
@@ -25,16 +23,16 @@
 
     .fonctionnement {
         display: flex;
-
     }
 
     .restaurant_list {
         flex-wrap: wrap;
         width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
 
         article {
-            flex-direction: row;
-            width: 40%;
+            max-width: 49%;
         }
     }
 
@@ -51,8 +49,6 @@
     .menu_categorie {
         width: 30%;
     }
-
-
 
     /** footer **/
 
