@@ -552,7 +552,7 @@ body {
 
 .fa-circle-check {
   align-self: center;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: all 0.7s ease-in-out;
   color: white;
   font-size: 28px;
@@ -564,7 +564,7 @@ body {
 
 .menu_card:hover .fa-circle-check {
   margin-right: 0;
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .loader {
